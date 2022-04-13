@@ -2,7 +2,7 @@
 
 NAME		= libft.a                    												# name of the programm
 
-CC		= gcc                        												# compiler
+CC			= gcc                        												# compiler
 
 FLAGS		= -Wall -Wextra -Werror      												# flags
 
@@ -15,7 +15,7 @@ LIBC 		= ar rc					 												    # creates library archive
 SOURCES		= srcs/*.c
 			
 
-OBJ	    = $(SOURCES:%.c=%.o)       	 												# trasnforms all the ".c" files into ".o" (objects)
+OBJ	    = $(SOURCES:.c=.o)       	 												# trasnforms all the ".c" files into ".o" (objects)
 
 INCLUDES 	= includes/libft.h   														# include ".h"
 

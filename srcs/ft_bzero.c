@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 16:02:20 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/13 18:27:35 by dsoroko          ###   ########.fr       */
+/*   Created: 2022/04/13 18:52:13 by dsoroko           #+#    #+#             */
+/*   Updated: 2022/04/13 19:04:24 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if (c >= ' ' && c <= '~')
-		return (!0);
-	return (0);
+	ft_memset(s, 0, n);
 }
+
+/*
+int main()
+{
+	char str[100] = "bzero write zeroes to a byte string";
+
+	ft_bzero(str + 3, 1);
+	printf("After memset(): %s\n", str);
+	return 0;
+}
+*/

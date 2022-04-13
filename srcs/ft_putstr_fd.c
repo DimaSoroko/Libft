@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 16:02:20 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/13 18:27:35 by dsoroko          ###   ########.fr       */
+/*   Created: 2022/04/13 18:31:40 by dsoroko           #+#    #+#             */
+/*   Updated: 2022/04/13 19:04:20 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (c >= ' ' && c <= '~')
-		return (!0);
-	return (0);
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }
