@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:22:07 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/19 14:21:02 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/19 16:10:31 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,9 @@ int	ft_atoi(const char *str)
 // 	printf("\n");
 // 	printf("%d ", atoi(NULL));
 // 	printf("\n");
+// 	printf("%d ", ft_atoi("19489384723948723948"));
+// 	printf("\n");
+// 	printf("%d ", atoi("19489384723948723948"));
 	
 // 	return 0;
 // }

@@ -6,13 +6,13 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 10:32:06 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/19 10:45:55 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/19 17:13:42 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s != (char)c)
 	{

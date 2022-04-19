@@ -6,13 +6,13 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 11:04:32 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/19 11:21:06 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/19 19:02:28 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	
 }

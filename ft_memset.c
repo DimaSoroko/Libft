@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 19:30:26 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/19 11:22:37 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/19 17:11:55 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char *b_ret;
+	char	*b_ret;
 
 	b_ret = (char *)b;
 	while (len > 0)

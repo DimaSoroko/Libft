@@ -6,13 +6,13 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 11:10:10 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/19 11:21:31 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/19 19:02:30 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	
 }

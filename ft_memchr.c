@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 11:03:25 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/19 15:37:09 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/19 18:03:10 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 // 	printf("String after ft_memchr is: |%s|\n", result);
 // 	result = memchr(str, ch2, 15);
 // 	printf("String after memchr is: |%s|\n", result);
-
+	
 // 	return (0);
 // }
