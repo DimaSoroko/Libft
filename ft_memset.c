@@ -6,13 +6,13 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 19:30:26 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/14 10:19:03 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/19 11:22:37 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	char *b_ret;
 

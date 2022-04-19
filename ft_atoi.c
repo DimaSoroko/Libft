@@ -6,11 +6,11 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:22:07 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/13 17:43:00 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/19 14:21:02 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -18,11 +18,13 @@ int	ft_atoi(const char *str)
 	int	i;
 	int	sign;
 
+	if (!str)
+		return (0);
 	result = 0;
 	i = 0;
 	sign = 1;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\r' ||
-		   str[i] == '\t' || str[i] == '\v' || str[i] == '\f')
+	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\r'
+		|| str[i] == '\t' || str[i] == '\v' || str[i] == '\f')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
@@ -37,7 +39,6 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * result);
 }
-
 
 // #include <stdlib.h>
 // #include <stdio.h>
@@ -54,6 +55,11 @@ int	ft_atoi(const char *str)
 // 	printf("%d ", ft_atoi(" ---+--+1234ab567"));
 // 	printf("\n");
 // 	printf("%d ", atoi(" ---+--+1234ab567"));
-
+// 	printf("\n");
+// 	printf("%d ", ft_atoi(NULL));
+// 	printf("\n");
+// 	printf("%d ", atoi(NULL));
+// 	printf("\n");
+	
 // 	return 0;
 // }

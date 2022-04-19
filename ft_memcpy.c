@@ -1,35 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 16:02:20 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/19 12:48:29 by dsoroko          ###   ########.fr       */
+/*   Created: 2022/04/19 10:21:55 by dsoroko           #+#    #+#             */
+/*   Updated: 2022/04/19 10:46:03 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	if (c >= ' ' && c <= '~')
-		return (!0);
-	return (0);
+	size_t	i;
+	char	*d;
+	char	*s;
+
+	i = 0;
+	d = (char *)dst;
+	s = (char *)src;
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (dst);
 }
 
 // #include <stdio.h>
-// #include <ctype.h>
+// #include <strings.h>
 // int main()
 // {
-// 	char c, result;
+// 	char dst[100] = "Here is dst";
+// 	char src[100] = "Here is src";
 
-// 	c = '*';
-// 	result = ft_isprint(c);
-// 	printf("The result is %d\n", result);
-// 	result = isprint(c);
-// 	printf("The result is %d\n", result);
-
+// 	ft_memcpy(dst, src, sizeof(src));
+// 	printf("dst after ft_memset(): %s\n", dst);
+// 	memcpy(dst, src, sizeof(src));
+// 	printf("dst after memset(): %s\n", dst);
 // 	return 0;
 // }
+

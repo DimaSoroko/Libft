@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 15:53:55 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/13 16:01:30 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/19 12:37:50 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,24 @@ int	ft_isdigit(int c)
 		return (!0);
 	return (0);
 }
+
+// #include <stdio.h>
+// #include <ctype.h>
+// int main()
+// {
+// 	char c, result;
+
+// 	c = '*';
+// 	result = ft_isdigit(c);
+// 	printf("The result is %d\n", result);
+// 	result = isdigit(c);
+// 	printf("The result is %d\n", result);
+
+// 	c = '5';
+// 	result = ft_isdigit(c);
+// 	printf("The result is %d\n", result);
+// 	result = isdigit(c);
+// 	printf("The result is %d\n", result);
+
+// 	return 0;
+// }
