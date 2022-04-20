@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 16:44:07 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/13 17:01:30 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/20 14:03:39 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-
 
 // #include <stdio.h>
 // int main()

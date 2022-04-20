@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 11:02:36 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/19 17:51:30 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/20 10:23:40 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 // 	int result;
 
 // 	result = ft_strncmp(str1, str2, 6);
-// 	printf("Value returned by strncmp() is: %d\n", result);
+// 	printf("Value returned by ft_strncmp() is: %d\n", result);
 
 // 	result = strncmp(str1, str2, 6);
 // 	printf("Value returned by strncmp() is: %d\n", result);

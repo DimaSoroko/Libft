@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 18:35:53 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/19 18:02:58 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/20 14:01:34 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,14 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(n + '0', fd);
 }
+
+// #include <limits.h>
+// int main ()
+// {
+// 	ft_putnbr_fd(INT_MAX, 1);
+// 	ft_putchar_fd('\n', 1);
+// 	ft_putnbr_fd(INT_MIN, 1);
+// 	ft_putchar_fd('\n', 1);
+// 	ft_putnbr_fd(0, 1);
+// 	ft_putchar_fd('\n', 1);
+// }

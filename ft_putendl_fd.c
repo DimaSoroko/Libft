@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 18:32:05 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/19 18:02:56 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/20 12:39:24 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,3 +17,8 @@ void	ft_putendl_fd(char *s, int fd)
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }
+
+// int main ()
+// {
+// 	ft_putendl_fd("Hello", 1);
+// }

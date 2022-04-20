@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 18:31:40 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/19 18:03:00 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/20 14:01:51 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,8 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+
+// int main ()
+// {
+// 	ft_putstr_fd("Hello", 1);
+// }

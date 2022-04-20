@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 10:32:06 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/19 17:13:42 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/20 14:05:25 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 		if (!*s++)
 			return (0);
 	}
-	return (char *)s;
+	return ((char *)s);
 }
 
 // #include <stdio.h>

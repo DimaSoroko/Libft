@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:44:41 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/19 17:13:31 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/20 11:18:38 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ char	*ft_strdup(const char *s1)
 {
 	char	*str;
 
-	str = malloc(sizeof(char) * strlen(s1) + 1);
+	str = malloc(sizeof(char) * ft_strlen(s1) + 1);
 	if (!str)
 		return (0);
-	strlcpy(str, s1, strlen(str));
+	ft_strlcpy(str, s1, ft_strlen(str));
 	return (str);
 }
 
