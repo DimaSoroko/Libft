@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:44:41 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/20 11:18:38 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/21 15:03:24 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,20 @@
 char	*ft_strdup(const char *s1)
 {
 	char	*str;
+	int		i;
 
+	i = 0;
+	if (!s1)
+		return (NULL);
 	str = malloc(sizeof(char) * ft_strlen(s1) + 1);
 	if (!str)
 		return (0);
-	ft_strlcpy(str, s1, ft_strlen(str));
+	while (s1[i])
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	str[i] = '\0';
 	return (str);
 }
 
@@ -27,6 +36,6 @@ char	*ft_strdup(const char *s1)
 // #include <string.h>
 // int main()
 // {
-// 	printf("%s\n", ft_strdup("hello"));
-// 	printf("%s\n", strdup("hello"));
+// 	printf("%s\n", ft_strdup("Jambonfromagequiroulemal"));
+// 	printf("%s\n", strdup("Jambonfromagequiroulemal"));
 // }

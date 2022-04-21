@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 11:01:39 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/19 18:55:33 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/20 18:16:12 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	char_to_find;
+	char	find;
 	int		i;
 
-	char_to_find = (unsigned int)c;
+	find = (unsigned int)c;
 	i = ft_strlen(s);
 	while (i > 0)
 	{
-		if (s[i] == char_to_find)
+		if (s[i] == find)
 			return ((char *)s + i);
 		i--;
 	}
+	if (s[i] == find)
+		return ((char *)s);
 	return (0);
 }
 
@@ -33,7 +35,7 @@ char	*ft_strrchr(const char *s, int c)
 // int main()
 // {
 // 	const char str[] = "Here.is.the.string";
-// 	const char ch = '.';
+// 	const char ch = 'H';
 // 	char *result;
 
 // 	result = ft_strrchr(str, ch);

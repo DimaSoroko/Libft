@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 10:28:43 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/20 10:28:01 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/21 14:57:17 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,5 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-
 
 #endif

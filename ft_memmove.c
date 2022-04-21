@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 10:33:00 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/20 09:45:18 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/20 16:02:06 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 // 	memmove(dst, src + 3, 3);
 // 	printf("dst after memmove: |%s|\n", dst);
 // 	return 0;
-// }
-
-// int main()
-// {
-// 	printf("Test de ft_memmove :\n");
-// 	char s1[] = "string test";
-// 	char s2[] = "string test";
-// 	if (!strcmp(memmove(s1, s1 + 3, 5), ft_memmove(s2, s2 + 3, 5)) && !strcmp(memmove(s1 + 3, s1, 5), ft_memmove(s2 + 3, s2, 5)))
-// 		printf("OK\n");
-// 	else
-// 		printf("Failed (tests : ft_memmove(s, s + 3, 5) and ft_memmove(s + 3, s, 5)).\n");
 // }
