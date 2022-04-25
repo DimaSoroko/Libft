@@ -6,7 +6,7 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 11:08:41 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/19 19:02:24 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/25 10:07:59 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,37 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
-	char			*str;
+	char	*substr;
+	size_t	i;
+	size_t	j;
+	size_t	str_len;
 
 	if (!s)
 		return (NULL);
-	i = 0;
-	str = (char *)malloc(sizeof(char) * len + 1);
-	if (!str)
+	if (len >= ft_strlen(s))
+		str_len = ft_strlen(s);
+	else
+		str_len = len;
+	substr = malloc (sizeof(char) * (str_len + 1));
+	if (!substr)
 		return (NULL);
-	while (i < len)
+	i = ((size_t)start);
+	j = 0;
+	while (i < ft_strlen(s) && j < len)
 	{
-		str[i] = s[start + i];
+		substr[j] = s[i];
 		i++;
+		j++;
 	}
-	str[i] = '\0';
-	return (str);
+	substr[j] = '\0';
+	return (substr);
 }
 
 // #include <stdio.h>
 // int main()
 // {
 // 	char str[20] = "This is string";
-// 	char *result = ft_substr(str, 8, 6);
+// 	char *result = ft_substr(str, 0, 18);
 // 	printf("The  result is: |%s|\n", result);
 // 	return 0;
 // }

@@ -6,26 +6,23 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 11:11:14 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/20 14:00:57 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/25 12:32:38 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	get_len(long nb)
+static long int	get_len(int n)
 {
 	int	len;
 
 	len = 0;
-	if (nb < 0)
+	if (n <= 0)
+		len = 1;
+	while (n != 0)
 	{
-		nb = nb * -1;
 		len++;
-	}
-	while (nb > 0)
-	{
-		nb = nb / 10;
-		len++;
+		n = n / 10;
 	}
 	return (len);
 }
@@ -42,17 +39,17 @@ char	*ft_itoa(int nb)
 	if (!str)
 		return (NULL);
 	str[len--] = '\0';
-	if (n == 0)
-		str[0] = '0';
 	if (n < 0)
 	{
 		str[0] = '-';
-		n = n * -1;
+		n *= -1;
 	}
+	if (n == 0)
+		str[0] = '0';
 	while (n > 0)
 	{
 		str[len] = (n % 10) + '0';
-		n = n / 10;
+		n /= 10;
 		len--;
 	}
 	return (str);

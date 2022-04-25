@@ -6,23 +6,35 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:22:07 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/20 16:02:18 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/25 12:08:04 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	atoi_limits(unsigned long long result, int sign, int size)
+{
+	unsigned long long	max;
+
+	max = 9223372036854775807U;
+	if (((result > max) || size > 19) && sign > 0)
+		return (-1);
+	else if (((result > (max + 1)) || size > 19) && sign < 0)
+		return (0);
+	return (result * sign);
+}
+
 int	ft_atoi(const char *str)
 {
-	int	result;
-	int	i;
-	int	sign;
+	unsigned long long	result;
+	int					i;
+	int					sign;
+	int					size;
 
-	if (!str)
-		return (0);
 	result = 0;
 	i = 0;
 	sign = 1;
+	size = 0;
 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\r'
 		|| str[i] == '\t' || str[i] == '\v' || str[i] == '\f')
 		i++;
@@ -32,12 +44,13 @@ int	ft_atoi(const char *str)
 			sign = -1;
 		i++;
 	}
-	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
 		result = result * 10 + str[i] - '0';
 		i++;
+		size ++;
 	}
-	return (sign * result);
+	return (atoi_limits(result, sign, size));
 }
 
 // #include <stdlib.h>
@@ -56,12 +69,15 @@ int	ft_atoi(const char *str)
 // 	printf("\n");
 // 	printf("%d ", atoi(" ---+--+1234ab567"));
 // 	printf("\n");
-// 	printf("%d ", ft_atoi(NULL));
+// 	printf("%d ", ft_atoi("-9223372036854775808"));
 // 	printf("\n");
-// 	printf("%d ", atoi(NULL));
+// 	printf("%d ", atoi("-9223372036854775808"));
+// 	printf("\n");
+// 	printf("%d ", ft_atoi("9223372036854775807"));
+// 	printf("\n");
+// 	printf("%d ", atoi("9223372036854775807"));
 // 	printf("\n");
 // 	printf("%d ", ft_atoi("19489384723948723948"));
 // 	printf("\n");
 // 	printf("%d ", atoi("19489384723948723948"));
-// 	return 0;
 // }
