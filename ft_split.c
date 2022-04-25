@@ -6,11 +6,30 @@
 /*   By: dsoroko <disoroko@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 16:28:12 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/20 17:21:34 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/25 16:19:23 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	count_words(const char *s, char c)
+{
+	int		i;
+	int		count;
+
+	i = 0;
+	count = 0;
+	while (s[i])
+	{
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i] && s[i] != c)
+			count++;
+		while (s[i] && s[i] != c)
+			i++;
+	}
+	return (count);
+}
 
 static char	**ft_free(int index, char **split)
 {
@@ -18,27 +37,6 @@ static char	**ft_free(int index, char **split)
 		free(split[index]);
 	free(split);
 	return (NULL);
-}
-
-static int	count_words(const char *s, char c)
-{
-	int		i;
-	int		count;
-	char	*str;
-
-	str = (char *)s;
-	i = 0;
-	count = 0;
-	while (str[i])
-	{
-		while (str[i] && str[i] == c)
-			i++;
-		if (str[i] && str[i] != c)
-			count++;
-		while (str[i] && str[i] != c)
-			i++;
-	}
-	return (count);
 }
 
 static char	*find_next_word(char *s, char c, int index)
@@ -75,7 +73,7 @@ char	**ft_split(char const *s, char c)
 	i = -1;
 	if (!s)
 		return (NULL);
-	str = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
+	str = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!str)
 		return (NULL);
 	while (++i < count_words(s, c))
@@ -87,3 +85,16 @@ char	**ft_split(char const *s, char c)
 	str[i] = 0;
 	return (str);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char str[20] = "/Here/is/the/string";
+// 	char **result = ft_split(str, '/');
+// 	printf("The result is : %s\n", result[0]);
+// 	printf("The result is : %s\n", result[1]);
+// 	printf("The result is : %s\n", result[2]);
+// 	printf("The result is : %s\n", result[3]);
+// 	printf("The result is : %s\n", result[4]);
+// 	return 0;
+// }
