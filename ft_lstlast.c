@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsoroko <dsoroko@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 18:31:40 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/27 17:12:25 by dsoroko          ###   ########.fr       */
+/*   Created: 2022/04/26 11:50:13 by dsoroko           #+#    #+#             */
+/*   Updated: 2022/04/27 17:38:47 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t	i;
-
-	if (!s)
-		return ;
-	i = 0;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }
 
-// int main()
-// {
-// 	ft_putstr_fd("Hello", 1);
-// 	ft_putstr_fd(NULL, 1);
-// }
+//Возвращает последний элемент списка.

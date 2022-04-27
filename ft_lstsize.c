@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsoroko <dsoroko@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 18:31:40 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/27 17:12:25 by dsoroko          ###   ########.fr       */
+/*   Created: 2022/04/26 11:43:58 by dsoroko           #+#    #+#             */
+/*   Updated: 2022/04/27 17:38:39 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
+	int	i;
 
-	if (!s)
-		return ;
+	if (!lst)
+		return (0);
 	i = 0;
-	while (s[i])
+	while (lst)
 	{
-		write(fd, &s[i], 1);
+		lst = lst->next;
 		i++;
 	}
+	return (i);
 }
 
-// int main()
-// {
-// 	ft_putstr_fd("Hello", 1);
-// 	ft_putstr_fd(NULL, 1);
-// }
+//Подсчитывает количество элементов в списке.

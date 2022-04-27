@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsoroko <dsoroko@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 18:31:40 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/27 17:12:25 by dsoroko          ###   ########.fr       */
+/*   Created: 2022/04/26 16:12:09 by dsoroko           #+#    #+#             */
+/*   Updated: 2022/04/27 17:30:33 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	size_t	i;
-
-	if (!s)
+	if (!lst || !f)
 		return ;
-	i = 0;
-	while (s[i])
+	while (lst)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		f(lst->content);
+		lst = lst->next;
 	}
 }
 
-// int main()
-// {
-// 	ft_putstr_fd("Hello", 1);
-// 	ft_putstr_fd(NULL, 1);
-// }
+//Итерирует список ’lst’ и применяет функцию ’f’ к содержимому каждого элемента.

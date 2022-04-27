@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsoroko <dsoroko@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 18:31:40 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/27 17:12:25 by dsoroko          ###   ########.fr       */
+/*   Created: 2022/04/26 15:45:52 by dsoroko           #+#    #+#             */
+/*   Updated: 2022/04/27 17:30:24 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	size_t	i;
+	t_list	*tmp;
 
-	if (!s)
+	if (!lst || !del)
 		return ;
-	i = 0;
-	while (s[i])
+	while (*lst)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
 	}
+	*lst = NULL;
 }
 
-// int main()
-// {
-// 	ft_putstr_fd("Hello", 1);
-// 	ft_putstr_fd(NULL, 1);
-// }
+//Удаляет и освобождает данный элемент и всех его последователей, 
+//используя функцию ’del’ и free. 
+//Указатель на список установлен в NULL.

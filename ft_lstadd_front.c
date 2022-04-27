@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsoroko <dsoroko@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 18:31:40 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/27 17:12:25 by dsoroko          ###   ########.fr       */
+/*   Created: 2022/04/26 11:39:58 by dsoroko           #+#    #+#             */
+/*   Updated: 2022/04/27 17:38:55 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t	i;
-
-	if (!s)
+	if (!lst || !new)
 		return ;
-	i = 0;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
+	new->next = *(lst);
+	*lst = new;
 }
 
-// int main()
-// {
-// 	ft_putstr_fd("Hello", 1);
-// 	ft_putstr_fd(NULL, 1);
-// }
+//Добавляет элемент "new" в начало список.
