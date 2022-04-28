@@ -6,15 +6,14 @@
 /*   By: dsoroko <dsoroko@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 16:08:10 by dsoroko           #+#    #+#             */
-/*   Updated: 2022/04/27 17:53:31 by dsoroko          ###   ########.fr       */
+/*   Updated: 2022/04/27 18:03:23 by dsoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-
 	t_list	*new_list;
 	t_list	*temp;
 
